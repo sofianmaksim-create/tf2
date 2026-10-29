@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TF2 — Энциклопедия</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <h1 class="logo">TEAM FORTRESS 2 <span style="color:#e15a4d">///</span> ДОСЬЕ</h1>
+  <p>Энциклопедия классов, характеристик и предметов</p>
+  <nav>
+   <button class="active" data-tab="classes">Классы</button>
+   <button data-tab="items">Оружие и аксессуары</button>
+   <button data-tab="about">О сайте</button>
+  </nav>
+ </div>
+</header>
+<main class="wrap">
+ <section id="classes">
+  <div class="hero"><h2>Выбери своего наёмника</h2><p>Все девять игровых классов, их базовое здоровье, скорость и стиль игры. Значения указаны для стандартного снаряжения и могут меняться из-за эффектов и режимов.</p></div>
+  <div class="searchbar">
+   <input id="classSearch" placeholder="Поиск класса..." aria-label="Поиск класса">
+   <select id="roleFilter" aria-label="Фильтр по роли">
+    <option value="all">Все роли</option><option value="Нападение">Нападение</option><option value="Оборона">Оборона</option><option value="Поддержка">Поддержка</option>
+   </select>
+  </div>
+  <div id="classGrid" class="grid"></div>
+ </section>
+ <section id="items" class="hidden">
+  <div class="hero"><h2>Оружие и аксессуары</h2><p>Просматривай оружие, шапки и другие аксессуары. Кнопка открывает поиск предмета на Торговой площадке Steam. Есть поиск по классу, типу и редкости. Карточки оформлены в стиле TF2; эмодзи используются как локальные иллюстрации, чтобы сайт работал и без загрузки картинок.</p></div>
+  <div class="searchbar">
+   <input id="itemSearch" placeholder="Найти оружие или предмет..." aria-label="Поиск предмета">
+   <select id="itemClassFilter" aria-label="Фильтр предметов по классу"><option value="all">Все классы</option></select>
+   <select id="itemTypeFilter" aria-label="Фильтр по типу"><option value="all">Оружие и аксессуары</option><option value="Оружие">Оружие</option><option value="Аксессуар">Аксессуары</option></select>
+   <select id="rarityFilter" aria-label="Фильтр по редкости"><option value="all">Любая редкость</option><option value="Обычное">Обычные</option><option value="Редкое">Редкие</option><option value="Необычное">Необычные</option><option value="Чрезвычайно редкое">Чрезвычайно редкие</option></select>
+  </div>
+  <div id="itemGrid" class="grid"></div>
+  <p class="notice">Важно: сайт не показывает выдуманные цены. Кнопка открывает поиск предмета на Steam Community Market; доступность и цены проверяй на самой площадке.</p>
+ </section>
+ <section id="about" class="hidden">
+  <div class="hero"><h2>Об энциклопедии</h2><p>Мини-сайт сделан только на HTML, CSS и JavaScript — без библиотек и дополнительных установок.</p></div>
+  <div class="card"><div class="cardbody">
+   <h3>Что умеет сайт?</h3>
+   <ul><li>Просматривать 9 классов TF2 и их базовые характеристики.</li><li>Искать персонажей и фильтровать их по роли.</li><li>Искать оружие и аксессуары по названию, классу, типу и редкости.</li><li>Переходить к поиску предмета на Торговой площадке Steam.</li></ul>
+   <p class="notice">Это фанатский справочный проект, не связанный с Valve. Цены не загружаются автоматически; для актуальных данных нужна интеграция с источником рыночных цен.</p>
+   <p>Справочник классов: <a href="https://wiki.teamfortress.com/wiki/Classes" target="_blank" rel="noopener">Official Team Fortress Wiki</a>.</p>
+  </div></div>
+ </section>
+</main>
+<footer>TF2 DOSSIER · Фанатский справочный сайт · Team Fortress 2 принадлежит Valve</footer>
+<script src="script.js"></script>
+</body>
+</html>
